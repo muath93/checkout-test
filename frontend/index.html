@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <!-- <link rel="stylesheet" href="normalize.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="invoice-card">
+        <div class="invoice-title">
+          <div id="main-title">
+            <h4>Order Details</h4>
+            <span id="order_number">#89292</span>
+          </div>
+
+          <span id="order_date">20/06/2022</span>
+        </div>
+
+        <div class="invoice-details">
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <td>PRODUCT</td>
+                <td class="unit">UNIT</td>
+                <td>PRICE</td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="row-data">
+                <td>Bag</td>
+                <td class="unit">1</td>
+                <td id="price_one"></td>
+              </tr>
+
+              <tr class="row-data">
+                <td>Mouse</td>
+                <td class="unit">1</td>
+                <td id="price_two"></td>
+              </tr>
+
+              <tr class="calc-row">
+                <td colspan="2"><b> Total</b></td>
+                <td id="price_total"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="invoice-footer"></div>
+      </div>
+
+      <form
+        id="payment-form"
+        method="POST"
+        action="https://merchant.com/charge-card"
+      >
+        <div class="one-liner">
+          <div class="card-frame"></div>
+          <button id="pay-button" disabled>PAY NOW</button>
+        </div>
+        <p class="error-message"></p>
+        <p class="success-payment-message"></p>
+      </form>
+    </div>
+
+    <script src="https://cdn.checkout.com/js/framesv2.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    <!-- <script type="module" src="/js/checkPayment.js"></script> -->
+  </body>
+</html>

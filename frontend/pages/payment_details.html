@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Payment Details</title>
+  </head>
+  <body>
+    <p class="p-8 mb-4 text-5xl font-medium dark:text-white">Payment Details</p>
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-6 py-3">#ID</th>
+            <th scope="col" class="px-6 py-3">Amount</th>
+            <th scope="col" class="px-6 py-3">Currency</th>
+            <th scope="col" class="px-6 py-3">Scheme</th>
+            <th scope="col" class="px-6 py-3">Card Type</th>
+            <th scope="col" class="px-6 py-3">Card Number</th>
+            <th scope="col" class="px-6 py-3">Request Date</th>
+            <th scope="col" class="px-6 py-3">Status</th>
+            <th scope="col" class="px-6 py-3">Approved</th>
+            <!-- <th scope="col" class="px-6 py-3">
+              <span class="sr-only">Edit</span>
+            </th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <th
+              scope="row"
+              id="pay_id"
+              class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+            ></th>
+            <td id="amount" class="px-6 py-4"></td>
+            <td id="currency" class="px-6 py-4"></td>
+            <td id="schema" class="px-6 py-4"></td>
+            <td id="card_type" class="px-6 py-4"></td>
+            <td id="card_number" class="px-6 py-4"></td>
+            <td id="date" class="px-6 py-4"></td>
+            <td id="status" class="px-6 py-4"></td>
+            <td id="approved" class="px-6 py-4 green"></td>
+            <!-- <td class="px-6 py-4 text-right">
+              <a
+                href="#"
+                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >Edit</a
+              >
+            </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button id="home" class="pay-button">Home</button>
+
+    <script type="module" src="../js/Payment.js"></script>
+  </body>
+</html>
